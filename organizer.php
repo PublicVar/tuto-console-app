@@ -1,7 +1,9 @@
 <?php
-	require_once 'vendor/autoload.php';
-	
-	use Symfony\Component\Console\Application;
+require_once 'vendor/autoload.php';
 
-	$application = new Application();
-	$application->run();
+use Symfony\Component\Console\Application;
+use PublicVar\Command\SerieOrganizerCommand;
+    
+$application = new Application();
+$application->add(new SerieOrganizerCommand() );
+$application->run();
